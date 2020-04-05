@@ -4,8 +4,8 @@
 #include <iostream>
 #include <vector>
 
-#define NUM 5 //maximum value for a cell of the matrix
-#define SIZE 3 //maximum dimension for rows/columns of a matrix
+#define NUM 100 //maximum value for a cell of the matrix
+#define SIZE 100 //maximum dimension for rows/columns of a matrix
 
 using namespace std;
 
@@ -19,9 +19,9 @@ class MatrixChain
 
   public:
     MatrixChain(int);
+    Matrix rec_mul(int i, int j, Matrix K); // BONUS - recursion function to multiply all vertices in optimal order
     Matrix multiply(Matrix a, Matrix b); //TODO - BONUS
     Matrix dynamicChain(); //TODO
-
 
     void printDimensions(){
       //print the dimensions generated
@@ -31,6 +31,12 @@ class MatrixChain
       }
       cout << dimensions[dimensions.size()-1] << "}" << endl;
     }
+
+    /* 
+      helper get_functions for printing final matrix answer
+    */
+    // int get_row() { return dimensions[0]; } 
+    // int get_col() { return dimensions[chain.size()]; }
 
   private:
     void generate_matrix(int, int);

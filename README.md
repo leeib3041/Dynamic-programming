@@ -48,7 +48,11 @@ Run your last experiment with parameters
 
 Update this README file, copy and paste the results printed by your program. This should contain, the list of dimensions as printed by the function `chain.printDimensions();` and the optimal solution as printed by `chain.dynamicChain();`
 
-[UPDATE HERE]
+        [UPDATE HERE]
+        
+        {8,50,74,59,31,73,45,79,24,10,41,66,93,43,88,4,28,30,41,13,4,70,10,58,61,34,100,79,17,36,98,27,13,68,11,34,80,50,80,22,68,73,94,37,86,46,29,92,95,58,2,54,9,45,69,91,25,97,31,4,23,67,50,25,2,54,78,9,29,34,99,82,36,14,66,15,64,37,26,70,16,95,30,2,18,96,6,5,52,99,89,24,6,83,53,67,17,38,39,45,2}
+
+        Minimum number of steps required for multiplying the chain of matrices: 433254
 
 
 ### Step 5 BONUS - Complete the dynamic programming multiplication
@@ -58,3 +62,5 @@ Now that you have the matrix K we know what is the correct order for applying ou
 Start by implementing the function `Matrix multiply(Matrix a, Matrix b);` in `MatrixChain` that, given two matrices, returns their multiplication.
 
 Then, modify function `dynamicChain()` again. This time, instead of returning K, use K for computing the matrix multiplications in the optimal sequence. Then, return the matrix obtained instead of returning K.
+
+        Completed
