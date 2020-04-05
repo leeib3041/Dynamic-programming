@@ -4,8 +4,8 @@
 #include <iostream>
 #include <vector>
 
-#define NUM 100 //maximum value for a cell of the matrix
-#define SIZE 100 //maximum dimension for rows/columns of a matrix
+#define NUM 5 //maximum value for a cell of the matrix
+#define SIZE 3 //maximum dimension for rows/columns of a matrix
 
 using namespace std;
 
@@ -14,8 +14,8 @@ typedef vector<vector<int> > Matrix;
 class MatrixChain
 {
   protected:
-    vector<Matrix> chain;
-    vector<int> dimensions;
+    vector<Matrix> chain; // stores the matrices
+    vector<int> dimensions; // stores the sizes of these matrices || rows = dimesnsions[i] and columns = dimensions[i+1]
 
   public:
     MatrixChain(int);
@@ -25,9 +25,9 @@ class MatrixChain
 
     void printDimensions(){
       //print the dimensions generated
-      cout << "{"
+      cout << "{";
       for(int i=0; i<dimensions.size()-1; i++){
-        cout << dimensions[i] << ","
+        cout << dimensions[i] << ",";
       }
       cout << dimensions[dimensions.size()-1] << "}" << endl;
     }
